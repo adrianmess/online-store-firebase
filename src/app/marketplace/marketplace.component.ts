@@ -22,13 +22,10 @@ export class MarketplaceComponent implements OnInit{
   }
 
 
-  goToDetailPage(clickedAlbum: Album) {
+  // goToDetailPage(clickedAlbum: Album) {    --- for local non-firebase ---
+    goToDetailPage(clickedAlbum) {
     //old - before we got were retreiving the album key from firebase
   //   this.router.navigate(['albums', clickedAlbum.id]);
-    this.router.navigate(['albums', clickedAlbum.$key]);
-  };
-
-
-
-
+  this.router.navigate(['albums', clickedAlbum.$key]);
+};
 }
