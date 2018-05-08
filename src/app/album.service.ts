@@ -22,11 +22,18 @@ export class AlbumService {
     this.albums.push(newAlbum);
   }
 
-  getAlbumById(albumId: number){
+
+// before firebase
+  // getAlbumById(albumId: number){
     // for (var i = 0; i <= ALBUMS.length - 1; i++) {
     //   if (ALBUMS[i].id === albumId) {
     //     return ALBUMS[i];
     //   }
     // }
-  }
+  // }
+
+  // firebase
+  getAlbumById(albumId: string){
+    return this.database.object('albums/' + albumId);
+}
 }
